@@ -2,13 +2,7 @@
 
 from tkinter import *
 
-#Key down function\
-
-#def newteam():
-#    print("Accepted")
-
-
-# Creating Frameworki
+# Creating Framework
 window = Tk()
 window.geometry('1000x1000')
 window.title("Volleyball Statistics")
@@ -112,10 +106,11 @@ def create_team():
     cancel_btn = Button(new_team, text = "Cancel", command = cancel)
     cancel_btn.grid(row = 20 , column = 0)
 
-    
+
 # Creating a "Create a Team" Button
 newteam_label = Label(window, text = "Click below to create a new team!", bg = "white", font = "arial 15 bold").grid(row = 1, column = 0)
 newteam_bttn = Button (window, text = "Create a New Team", width = 15 , command = create_team).grid(row = 2 , column = 0)
+
 
 # CREATING LOGIN FUNCTION
 def login():
@@ -198,7 +193,6 @@ def login():
 
 # Creating a "Login" Button
 login_bttn = Button (window, text = "Login", width = 5 , command = login).grid(row = 4 , column = 0)
-
 
 
 #myteams_bttn = Button (window, text = "My Teams", width = 15 , command = my_teams).grid(row = 2 , column = 0)
