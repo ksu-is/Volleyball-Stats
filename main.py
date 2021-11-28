@@ -97,10 +97,57 @@ def create_team():
     jersey16.grid(row = 18, column = 0)
  # Submit & Cancel Button Functions
     def submit():
-        print("Approved")
+        name1 = player1.get()
+        num1 = jersey1.get()
+        print("Player One:" ,name1 ,"#", num1)
+        name2 = player2.get()
+        num2 = jersey2.get()
+        print("Player Two:" ,name2 ,"#", num2)
+        name3 = player3.get()
+        num3 = jersey3.get()
+        print("Player Three:" ,name3 ,"#", num3)
+        name4 = player4.get()
+        num4 = jersey4.get()
+        print("Player Four:" ,name4 ,"#", num4)
+        name5 = player1.get()
+        num5 = jersey1.get()
+        print("Player Five:" ,name5 ,"#", num5)
+        name6 = player6.get()
+        num6 = jersey6.get()
+        print("Player Six:" ,name6 ,"#", num6)
+        name7 = player7.get()
+        num7 = jersey7.get()
+        print("Player Seven:" ,name7 ,"#", num7)
+        name8 = player8.get()
+        num8 = jersey8.get()
+        print("Player Eight:" ,name8 ,"#", num8)
+        name9 = player9.get()
+        num9 = jersey9.get()
+        print("Player Nine:" ,name9 ,"#", num9)
+        name10 = player10.get()
+        num10 = jersey10.get()
+        print("Player Ten:" ,name10 ,"#", num10)
+        name11 = player11.get()
+        num11 = jersey11.get()
+        print("Player Eleven: " ,name11 ,"#", num11)
+        name12 = player12.get()
+        num12 = jersey12.get()
+        print("Player Twelve" ,name12 ,"#", num12)
+        name13 = player13.get()
+        num13 = jersey13.get()
+        print("Player Thirteen:" ,name13 ,"#", num13)
+        name14 = player14.get()
+        num14 = jersey14.get()
+        print("Player Fourteen:" ,name14 ,"#", num14)
+        name15 = player15.get()
+        num15 = jersey15.get()
+        print("Player Fifeteen:" ,name15 ,"#", num15)
+        name16 = player16.get()
+        num16 = jersey16.get()
+        print("Player Sixteen:" ,name16 ,"#", num16)
     def cancel():
         print("Disapproved")
- # Creating Submit and Canel Buttons
+ # Creating Submit and Cancel Buttons
     submit_btn = Button(new_team, text = "Submit", command = submit)
     submit_btn.grid(row = 20 , column = 1)
     cancel_btn = Button(new_team, text = "Cancel", command = cancel)
@@ -112,7 +159,7 @@ newteam_label = Label(window, text = "Click below to create a new team!", bg = "
 newteam_bttn = Button (window, text = "Create a New Team", width = 15 , command = create_team).grid(row = 2 , column = 0)
 
 
-# CREATING LOGIN FUNCTION
+# CREATING "LOGIN" FUNCTION
 def login():
  # formatting 
     log_in = Toplevel()
@@ -132,13 +179,16 @@ def login():
     passwordentry = Entry(log_in, textvariable = passwordvalue)
  # Packing Entry Fields
     email_phoneentry.grid(row = 2, column = 1)
-    passwordentry.grid(row = 3, column = 1) 
+    passwordentry.grid(row = 3, column = 1)
+    passwordentry.config(show = "*")
  # defining enter button
     def enter():
-        print("Accepted")
- # Submit Button
+        username = email_phoneentry.get()
+        password = passwordentry.get()
+        print("Username," , username, "and Password, ", password, ", successful" )
+ # Enter Button
     Button(log_in, text = "Enter", command = enter).grid(row = 4, column = 1)
- # CREATE A PROFILE FUNCTION
+ # CREATING A "CREATE A PROFILE" FUNCTION
     def create():
         create_profile = Toplevel()
         create_profile.geometry("500x500")
@@ -183,10 +233,16 @@ def login():
         checkbtn2.grid(row=6, column = 1)
    # defining submit button
         def profile():
-            print("Accepted")
+            name = nameentry.get()
+            email = emailentry.get()
+            phone = phoneentry.get()
+            password = passwordentry.get()
+            confirm = confirm_passwordentry.get()
+
+            print("Team creation successful. Information below:\n",name, email,phone,password,confirm)
    # Submit Button
         Button(create_profile, text = "Submit", command = profile).grid(row = 7, column = 1)
- # create a profile button
+ # Creating a "Create a profile" button
     create_bttn = Button (log_in, text = "Create a New Profile", width = 15 , command = create)
     create_bttn.grid(row = 4 , column = 0)
 
@@ -194,8 +250,21 @@ def login():
 # Creating a "Login" Button
 login_bttn = Button (window, text = "Login", width = 5 , command = login).grid(row = 4 , column = 0)
 
+# CREATING A "MY TEAMS" FUNCTION
+def my_teams():
+ # formatting 
+    myteams = Toplevel()
+    myteams.geometry("500x500")
+    myteams.title("My Teams")
+ # Creating Header / Explanation
+    myteam_lbl = Label(myteams, text = "My Teams!", font = "arial 12 bold", bg = "white" )
+    myteam_lbl.grid(row = 1 , column = 0)
 
-#myteams_bttn = Button (window, text = "My Teams", width = 15 , command = my_teams).grid(row = 2 , column = 0)
+# Creating a "My Teams" Button
+myteams_bttn = Button (window, text = "My Teams", width = 15 , command = my_teams).grid(row = 2 , column = 1)
+
+
+
 
 window.mainloop()
 
