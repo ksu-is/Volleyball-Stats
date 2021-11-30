@@ -1,6 +1,8 @@
 # My Vollyeyball project
 
 from tkinter import *
+#from openpyxl.workbook import Workbook
+#from openpyxl import local_workbook
 
 # Creating Framework
 window = Tk()
@@ -238,8 +240,20 @@ def login():
             phone = phoneentry.get()
             password = passwordentry.get()
             confirm = confirm_passwordentry.get()
+            coachcheck = checkvalue.get
+            playercheck = checkvalue2.get
 
-            print("Team creation successful. Information below:\n",name, email,phone,password,confirm)
+            nameentry.delete(0, END)
+            emailentry.delete(0, END)
+            phoneentry.delete(0, END)
+            passwordentry.delete(0, END)
+            confirm_passwordentry.delete(0, END)
+
+            print("Team creation successful. Information below:\n",name, email,phone,password,confirm,coachcheck,playercheck)
+            confirmation = Label(create_profile, text = "New profile was created! Please proceed to login page" )
+            confirmation.grid(row = 8 , column = 1)
+            
+            
    # Submit Button
         Button(create_profile, text = "Submit", command = profile).grid(row = 7, column = 1)
  # Creating a "Create a profile" button
