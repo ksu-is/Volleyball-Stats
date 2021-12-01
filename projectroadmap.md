@@ -28,9 +28,10 @@
         - currently testing different ideas to see which one will work best with the ideas I have for my project 
             - offically going with tkinter
  # Step 3 
-- [] Create Powerpoint Slide 
-- [] Finish editing code and making minor tweaks
-- [] Update my projectroadmap to show progress by dates along with the steps / process
+- [x] Create Powerpoint Slide 
+- [x] Finish editing code and making minor tweaks
+    - Satisfied for project
+- [x] Update my projectroadmap to show progress by dates along with the steps / process
 
 
 
